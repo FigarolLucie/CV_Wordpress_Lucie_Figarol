@@ -1,0 +1,11 @@
+#main__container{
+  padding:1em;
+  margin-top: 2em;
+}
+
+@media(min-width: $breakpoint-small){
+  #main__container{
+    display:flex;
+  }
+}
+

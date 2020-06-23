@@ -1,0 +1,39 @@
+.intro{
+  background-image: url('/images/hydrotherapie-bienfaits-eau-de-mer.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 1em;
+  z-index:10;
+  position:relative;
+
+  
+
+  color: $color-text-header;
+   
+  a{
+    color: $color-text-header;
+  }
+  &::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    //filter: grayscale(1);
+    background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+    z-index:-1;
+  }
+  
+}
+
+
+
+
+
+@media (min-width: $breakpoint-medium){
+  .intro{
+    display:flex;
+  }
+}

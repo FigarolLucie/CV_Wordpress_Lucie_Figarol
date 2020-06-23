@@ -1,0 +1,15 @@
+#skills{
+  padding: 1em;
+}
+
+
+
+@media(min-width:$breakpoint-medium){
+  #skill__project{
+    display:flex;
+    flex-wrap:wrap;
+  }
+
+  
+
+}

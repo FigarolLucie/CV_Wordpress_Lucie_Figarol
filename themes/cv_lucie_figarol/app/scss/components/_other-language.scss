@@ -1,0 +1,32 @@
+.other__language{
+  padding:2em;
+}
+
+.language__container{
+  display:flex;
+}
+.language__img__container{
+  width:30%;
+  img{
+    width:50%;
+    margin:auto;
+  }
+}
+
+@media(min-width: $breakpoint-small){
+  
+  .language__img__container{
+    img{
+      width:40%;
+    }
+  }
+}
+
+@media(min-width: $breakpoint-big){
+  
+  .language__img__container{
+    img{
+      width:30%;
+    }
+  }
+}

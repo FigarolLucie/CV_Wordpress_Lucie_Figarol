@@ -1,0 +1,21 @@
+$fa-font-path: '~font-awesome/fonts';
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;600&family=Roboto+Condensed:wght@400;700&display=swap');
+
+$font-text-default: 'Roboto Condensed', sans-serif;
+$font-text-title:  'Oswald', sans-serif;
+
+
+$white: #FFF;
+$purple : #cc6699;
+
+
+$color-text-header: $white;
+$color-title: $purple;
+
+/* Breakpoint*/
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-big: 1200px;
+$breakpoint-infinity: 1500px;

@@ -1,0 +1,31 @@
+.other__passion{
+  padding:2em;
+}
+
+.passion__container{
+  display:flex;
+}
+
+.passion__img__container{
+  width:30%;
+  img{
+    width:50%;
+    margin:auto;
+  }
+}
+
+.passion__content{
+  width:70%;
+  margin:auto;
+}
+
+@media(min-width: $breakpoint-small){
+  .other__container{
+    width:60%;
+  }
+  .passion__img__container{
+    img{
+      width:40%;
+    }
+  }
+}

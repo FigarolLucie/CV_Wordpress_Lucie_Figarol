@@ -1,0 +1,44 @@
+.intro__personal {
+  width: 30%;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+#personal__img {
+  margin: auto;
+  margin-bottom: 1em;
+  width: 100%;
+
+  img {
+    border: solid 4px $color-text-header;
+    border-radius: 30px 0 30px 0;
+    width: 90%;
+    display: block;
+  }
+}
+
+.personal__lastname {
+  text-transform: uppercase;
+}
+
+
+@media(min-width: $breakpoint-medium){
+  .intro__personal{
+    margin:0;
+  }
+}
+
+@media(min-width: $breakpoint-big){
+  #personal__img {
+    
+    width: 60%;
+  }
+  #personal__more{
+    width:60%;
+    margin:auto;
+  }
+  #personal__name{
+    width:60%;
+    margin:auto;
+  }
+}

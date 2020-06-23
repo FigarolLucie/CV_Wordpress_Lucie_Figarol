@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+
+// 1. Abstracts
+@import "abstracts/variables";
+
+@import "bases/bases";
+
+@import "layouts/intro", 
+        "layouts/main",
+        'layouts/skills',
+        'layouts/others';
+
+@import "components/presentation", 
+        "components/more-info",
+        "components/main",
+        "components/skill",
+        "components/skill-item",
+        "components/skill-project",
+        "components/other",
+        "components/other-passion",
+        "components/footer",
+        "components/other-language";
+
+@import "~font-awesome/scss/font-awesome";
+@import "~reset-css/sass/reset";

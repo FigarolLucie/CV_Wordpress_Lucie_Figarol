@@ -1,0 +1,28 @@
+*{
+  box-sizing: border-box;
+}
+
+
+.wrapper{
+
+  background-color:#FFFAFA;
+  font-family: $font-text-default;
+}
+
+@media(min-width: $breakpoint-large)
+{
+  body{
+    background-color:#DCDCDC;
+  }
+  .wrapper{
+    width:80%;
+    margin:auto;
+  }
+}
+@media(min-width: $breakpoint-infinity)
+{
+  
+  .wrapper{
+    width:60%;
+  }
+}

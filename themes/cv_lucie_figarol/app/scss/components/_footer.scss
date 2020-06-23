@@ -1,0 +1,84 @@
+.footer {
+  background-image:url('/images/milky-way-1023340_1920.jpg');
+  background-position: bottom;
+  background-size: cover;
+  height:80vh;
+  z-index:100;
+  position:relative;
+  
+  .form__container {
+    width: 85%;
+    margin: auto;
+    padding-bottom: 2em;
+
+    @media(min-width : $breakpoint-medium){
+      width:45%;
+    }
+    
+  }
+
+  .title__section {
+    color: $white;
+  }
+
+  .labels,
+  .input__form {
+    width: 100%;
+    height:2.5em;
+  }
+
+  .labels {
+    color: $white;
+  }
+
+  .input__form {
+    margin: 0.5em 0 1em 0;
+    border: none;
+    border-radius: 3px;
+    background-color: $white;
+    
+  }
+ 
+  .button__sumbit {
+    border: none;
+    border-radius: 3px;
+    background-color: #76448A;
+    color: $white;
+    padding: 0.5em;
+    text-decoration: none;
+  }
+  .container_submit{
+    margin-top: 1em;
+    text-align: right;
+  }
+}
+
+.title__section{
+  text-align:center;
+  padding-top: 1em;
+  font-size:2.5em;
+  margin:auto;
+  position:relative;
+  
+}
+
+.footer:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, transparentize(black, 0.2), transparentize(black, 0.9));
+  z-index: -1;
+
+
+}
+
+#content__footer
+{
+  color: $white;
+  text-align: center;
+  margin:2em 0;
+}
+

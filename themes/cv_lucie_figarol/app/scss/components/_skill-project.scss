@@ -1,0 +1,59 @@
+#skill__project__title{
+  margin-top:2em;
+}
+
+.skill__project__container{
+  border: solid 2px  #cc6699;
+  width:90%;
+  margin:1em auto;
+  
+}
+
+.project__title{
+
+  h3{
+    font-weight:bold;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.project__info__container{
+  padding: 1em 0.5em;
+}
+
+
+/*TECHNO*/
+.project__techno{
+  margin-top: 1em;
+}
+.techno__title{
+font-weight:bold;
+}
+
+/*GITHUB*/
+
+.project__github{
+  margin-top:1em;
+
+  a{
+    color: #cc6699;
+  }
+}
+
+#allProjects{
+  width: 30%;
+  margin:auto;
+}
+
+
+
+@media(min-width:$breakpoint-medium){
+  .skill__project__container{
+    width:45%;
+  }
+
+  .skill__project__container:nth-child(2n){
+    margin-left:0.5em;
+  }
+}

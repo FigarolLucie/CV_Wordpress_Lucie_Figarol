@@ -1,0 +1,67 @@
+/* MAIN TITLE*/
+.main__title {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: $color-title;
+  border-bottom: solid 5px $color-title;
+  width:50%;
+}
+
+.main__article {
+  margin: 1em 0;
+
+  h2 {
+    font-weight:500;
+    font-family: $font-text-title;
+  }
+  h2:before {
+    font-family: "FontAwesome";
+    content: "\f111";
+    margin-right: 2%;
+    font-size: 0.6em;
+  }
+}
+
+.main__content {
+  margin-top: 0.5em;
+}
+
+@media(min-width: $breakpoint-small){
+  #XP__container{
+    width:50%;
+    padding:0 0.25em;
+    text-align:justify;
+  }
+  
+  #shcool__container{
+    width:50%;
+    padding:0 0.25em;
+    text-align:justify;
+  }
+}
+@media(min-width: $breakpoint-medium){
+  #XP__container{
+    width:60%;
+    padding:0 1em;
+    text-align:justify;
+  }
+  
+  #shcool__container{
+    width:40%;
+    padding:0 1em;
+    text-align:justify;
+  }
+}
+@media(min-width: $breakpoint-infinity){
+  #XP__container{
+    width:50%;
+    padding : 0 2em;
+  }
+  
+  #shcool__container{
+    width:50%;
+    padding : 0 2em;
+    
+  }
+}
