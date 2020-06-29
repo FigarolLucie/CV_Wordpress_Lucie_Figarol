@@ -11,4 +11,5 @@ Utlisation:
 - Webpack avec Browser Sync pour recharger la page à chaque sauvegarder
 - SCSS + Pattern 7-1
 - Création d'un thème
+- Déploiement sur server (O2Switch)
 
