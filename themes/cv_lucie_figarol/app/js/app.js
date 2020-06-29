@@ -1,13 +1,18 @@
 var app = {
 
-  baseUrl: 'http://localhost/CV_Lucie_Figarol/',
+  baseUrl: 'https://www.cv-luciefigarol.fr/',
   jsonUrl: '/wp-json/wp/v2/',
 
   init: async function () {
     console.log('init');
 
+
+    // Chargements des projets
     app.loadProjects();
+    // Chargements des compétences
     await app.loadLevelsSkills();
+
+    // Selection des competences + ajout d'un event listener sur chacun pour "écouter"
     const skill = document.querySelectorAll('.skill__item');
 
     for (let i = 0; i < skill.length; i++) {
@@ -16,6 +21,7 @@ var app = {
       });
     }
 
+    // Reset des projets lors du click sur Tous les projets
     document.getElementById('allProjects').addEventListener('click', function () {
       app.loadProjects();
     });
@@ -23,30 +29,35 @@ var app = {
     
   },
 
+  // Nettoyage de la liste des projets
   cleanProjectsList: function () {
 
     const containerSkill = document.querySelectorAll('.skill__project__container');
 
     for (let i = 0; i < containerSkill.length; i++) {
-      //console.log(containerSkill[i]);
       containerSkill[i].remove();
     }
   },
 
+  // Affichage des projets dans lequel "skill" est présent
   loadProjectsFilter: function (skill) {
 
     //nettoyage liste des projets
     app.cleanProjectsList();
 
+    // Récupération de l'id en courant de la compétence
     const idSkill = skill.dataset.id;
 
     axios.get(app.baseUrl + app.jsonUrl + 'projets?techno=' + idSkill)
       .then(function (response) {
         var project;
 
+        // Pour chaque données je récupère chaque projet
         for (index in response.data) {
 
           project = response.data[index];
+
+          // Remplissage des projets
           app.projectItem(project);
 
         }
@@ -54,6 +65,7 @@ var app = {
 
   },
 
+  // Chargement des compétences
   loadLevelsSkills: function () {
 
     return axios.get(app.baseUrl + app.jsonUrl + 'techno?per_page=100')
@@ -66,7 +78,6 @@ var app = {
         }
       })
       .catch(function (error) {
-        //app.displayError(error);
         console.log(error);
       });
   },
@@ -84,6 +95,8 @@ var app = {
     //Ajout de l'ID sur chaque Skills pour cibler par la suite les projets avec le même skill
     p.dataset.id = techno.id;
 
+
+    // Attribution de la couleur en fonction des description
     const description = techno.description;
 
     if (description === "occasionnelle") {
@@ -102,13 +115,13 @@ var app = {
 
   },
 
+  // Chargement des projets
   loadProjects: function () {
 
     // Nettoyage des précédents projets
     const containerSkill = document.querySelectorAll('.skill__project__container');
 
     for (let i = 0; i < containerSkill.length; i++) {
-      //console.log(containerSkill[i]);
       containerSkill[i].remove();
     }
 
@@ -125,12 +138,11 @@ var app = {
 
       })
       .catch(function (error) {
-        //app.displayError(error);
         console.log(error);
-      })
-      .finally(function () {
       });
   },
+
+  // Remplissage des projets
   projectItem: async function (project) {
 
     const dataTitle = project.title.rendered;
@@ -169,9 +181,6 @@ var app = {
 
     // Affichage des techno du projet
     await app.loadTechnoItem(project, projetTechno);
-    
-
-
 
     //container de base 
     const htmlProjet = document.querySelector('#skill__project');
@@ -184,13 +193,15 @@ var app = {
     projectTitle.appendChild(projetTechno);
 
     let projectGithub;
+
+    // Affichage ou non du lien GitHub si la variable contient quelque chose
     //.project__github
     if (dataGitHub) {
 
       projectGithub = document.createElement('p');
       projectGithub.classList.add('project__github');
       const linkGit = document.createElement('a');
-      linkGit.href = '#';
+      linkGit.href = dataGitHub;
       linkGit.innerHTML = '<i class="fa fa-github" aria-hidden="true"></i>';
       linkGit.append(" Lien GitHub du dossier");
       linkGit.target = '_blank';
@@ -204,6 +215,7 @@ var app = {
 
   },
 
+  // Remplissage des technologies d'un projet
   loadTechnoItem: async function (project, projetTechno) {
 
     const technos = project.techno;
@@ -224,8 +236,6 @@ var app = {
         .catch(function (error) {
           //app.displayError(error);
           console.log(error);
-        })
-        .finally(function () {
         });
     }
   },
