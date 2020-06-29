@@ -1,6 +1,6 @@
 ## Thème CV Lucie Figarol
 
-- reproduction de mon CV papier en CV sur WordPress tout est dynamisable. Je oeux ajouter via l'interface de WordPress une Expérience, une formation, modifier mon texte d'introduction, ma photo, mon numéro de tééphone, mes passions, etc. 
+- reproduction de mon CV papier en CV sur WordPress tout est dynamisable. Je peux ajouter via l'interface de WordPress une Expérience, une formation, modifier mon texte d'introduction, ma photo, mon numéro de tééphone, mes passions, etc. 
 
 Utlisation: 
 - plugin `cv-lucie-figarol` : pour pouvoir tout dynamiser
